@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<style type="text/css">
+	#div1{width: 100px;height: 100px;background: red;}
+</style>
+<script type="text/javascript">
+window.onload=function(){                       //使用window.onload 作用：在页面加载完，完成一功能 匿名函数
+    var oDiv1=document.getElementById('div1');
+    oDiv1.onmouseout=toRed;
+    oDiv1.onmouseover=toGreen;
+};
+function toGreen(){
+	var oDiv=document.getElementById('div1');
+	oDiv.style.width='200px';
+	oDiv.style.height='200px';
+	oDiv.style.background='green';
+}
+function toRed(){
+	var oDiv2=document.getElementById('div1');
+	oDiv2.style.width='100px';
+	oDiv2.style.height='100px';
+	oDiv2.style.background='red';
+}
+</script>
+	<title>改变Div的样式</title>
+</head>
+<body>
+
+
+	
+<div id="div1"></div> //取消行间样式
+</body>
+</html>
