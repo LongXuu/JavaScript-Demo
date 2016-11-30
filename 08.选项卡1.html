@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<style type="text/css">
+	input{background: white;}
+	.active{background: yellow;}
+</style>
+<head>
+	<title></title>
+<script type="text/javascript">
+	window.onload=function()
+	{
+		var aBtn=document.getElementsByTagName('input');
+		var i=0;
+
+		for (i = 0; i < aBtn.length; i++) {
+		aBtn[i].onclick=function()
+		{
+			for (i = 0; i < aBtn.length; i++) {
+				aBtn[i].className='';
+			}
+			this.className='active';
+		};
+		}
+	};
+</script>
+</head>
+<body>
+<input class="active" type="button" value="1">
+<input type="button" value="2">
+<input type="button" value="3">
+</body>
+</html>
