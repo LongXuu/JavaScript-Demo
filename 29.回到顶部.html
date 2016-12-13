@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<style type="text/css">
+	#btn1{position: fixed;bottom: 0;right: 0;}
+</style>
+	<title>回到顶部</title>
+<script type="text/javascript">
+window.onload=function ()
+{
+	var oBtn=document.getElementById('btn1'); //1.先获取按钮
+	var bSys=true;
+	var timer=null;
+	//如何检测用户拖动了滚动条
+	window.onscroll=function ()
+	{
+		if (!bSys) 
+		{
+			clearInterval(timer);
+			
+		}
+		bSys=false;
+	};
+
+	oBtn.onclick=function () //2.给按钮加上点击事件
+	{
+		timer=setInterval(function(){  //3.开定时器
+			var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+			var iSpeed=Math.floor(-scrollTop/8);
+
+			if(scrollTop==0)
+			{
+				clearInterval(timer);
+			}
+
+			bSys=true;
+			document.documentElement.scrollTop=document.body.scrollTop=scrollTop+iSpeed;
+		},30);
+	};
+};
+</script>
+</head>
+<body>
+1
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input id="btn1" type="button" value="回到顶部">
+
+</body>
+</html>
