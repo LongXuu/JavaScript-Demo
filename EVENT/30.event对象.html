@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript">
+	document.onclick=function (ev)
+	{
+		//alert(event.clientX+','+event.clientY); 
+		//event就是事件对象;clientX、Y分别告诉你横、纵坐标的位置
+		//event是IE中的写法，在火狐中应该如下写：
+		//alert(ev.clientX+','+ev.clientY); 
+
+		//解决兼容性问题
+		/*if (ev) {
+			alert(ev.clientX+','+ev.clientY); 
+		}
+		else{
+			alert(event.clientX+','+event.clientY); 
+		}*/
+
+		//更简便的做法：
+        var oEvent=ev||event;
+
+        alert(oEvent.clientX+','+oEvent.clientY); 
+
+	};
+</script>
+</head>
+<body>
+
+</body>
+</html>
