@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+*{margin: 0;padding: 0;}
+	#ul1{width: 100px;background: #CCC;border:1px solid black;position: absolute;display: none;}
+}
+</style>
+	<title></title>
+	<script type="text/javascript">
+		document.oncontextmenu=function (ev)
+		{
+			var oEvent=ev||event;
+			var oUl=document.getElementById('ul1');
+
+			oUl.style.display='block';
+			oUl.style.left=oEvent.clientX+'px';
+			oUl.style.top=oEvent.clientY+'px';
+
+			return false;
+
+		};
+		document.onclick=function ()
+		{
+			var oUl=document.getElementById('ul1');
+			oUl.style.display='none';
+		};
+	</script>
+</head>
+<body>
+<ul id="ul1">
+	<li>返回</li>
+	<li>前进</li>
+	<li>注销</li>
+	<li>加入</li>
+	<li>倒退</li>
+	<li>复制</li>
+
+</ul>
+</body>
+</html>
