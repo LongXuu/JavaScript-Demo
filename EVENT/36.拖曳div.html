@@ -19,19 +19,26 @@
 
 			disX=oEvent.clientX-oDiv.offsetLeft;
 			disY=oEvent.clientY-oDiv.offsetTop;
-		};
 
-		oDiv.onmousemove=function (ev)
+			oDiv.onmousemove=function (ev)
 		{
 			var oEvent=ev||event;
 
 			oDiv.style.left=oEvent.clientX-disX+'px';
 			oDiv.style.top=oEvent.clientY-disY+'px';
 		};
+		oDiv.onmouseup=function ()
+		{
+			oDiv.onmousemove=null;
+			oDiv.onmouseup=null;
+		};
+		};
+
+
 	};
 </script>
 </head>
 <body>
-
+<div id="div1"></div>
 </body>
 </html>
