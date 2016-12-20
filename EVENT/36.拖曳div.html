@@ -20,17 +20,17 @@
 			disX=oEvent.clientX-oDiv.offsetLeft;
 			disY=oEvent.clientY-oDiv.offsetTop;
 
-			oDiv.onmousemove=function (ev)
+			document.onmousemove=function (ev)
 		{
 			var oEvent=ev||event;
 
 			oDiv.style.left=oEvent.clientX-disX+'px';
 			oDiv.style.top=oEvent.clientY-disY+'px';
 		};
-		oDiv.onmouseup=function ()
+		document.onmouseup=function ()
 		{
-			oDiv.onmousemove=null;
-			oDiv.onmouseup=null;
+			document.onmousemove=null;
+			document.onmouseup=null;
 		};
 		};
 
