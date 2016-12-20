@@ -9,23 +9,35 @@
 	window.onload=function ()
 	{
 		var oDiv=document.getElementById('div1');
-
 		var disX=0;
 		var disY=0;
-
 		oDiv.onmousedown=function (ev)
 		{
 			var oEvent=ev||event;
-
 			disX=oEvent.clientX-oDiv.offsetLeft;
 			disY=oEvent.clientY-oDiv.offsetTop;
-
 			document.onmousemove=function (ev)
 		{
 			var oEvent=ev||event;
+			var l=oEvent.clientX-disX;
+			var t=oEvent.clientY-disY;
 
-			oDiv.style.left=oEvent.clientX-disX+'px';
-			oDiv.style.top=oEvent.clientY-disY+'px';
+			if (l<0) {
+				l=0;
+			}
+			else if (l>document.documentElement.clientWidth-oDiv.offsetWide) {
+				l=document.documentElement.clientWidth-oDiv.offsetWide;
+			}
+
+			if (t<0) {
+				t=0;
+			}
+			else if (t>document.documentElement.clientHeight-oDiv.offsetHeight) {
+				t=document.documentElement.clientHeight-oDiv.offsetHeight;
+
+			}
+			oDiv.style.left=l+'px';
+			oDiv.style.top=t+'px';
 		};
 		document.onmouseup=function ()
 		{
@@ -33,8 +45,6 @@
 			document.onmouseup=null;
 		};
 		};
-
-
 	};
 </script>
 </head>
