@@ -3,13 +3,23 @@
 <meta charset="utf-8">
 <head>
 <style type="text/css">
-	#div1{width: 150px;height: 50px;background: #FFCC99;border:1px solid #FF9900;display: none;}
+	#div1{
+    display: none;
+    width: 240px;
+    height: 36px;
+    color: #dc9632;
+    background-color: #fffde4;
+    border: 1px #dfb86d solid;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+	}
 
 </style>
 	<title>1.126记住密码提示框</title>
 </head>
 <body>
-<label onmouseover="document.getElementById('div1').style.display='block';" onmouseout="document.getElementById('div1').style.display='none';"><input type="checkbox">自动登录</label>
+<label onmouseover="document.getElementById('div1').style.display='block';" onmouseout="document.getElementById('div1').style.display='none';"><input type="checkbox">十天内免登陆</label>
 <div id="div1">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
 </body>
 </html>
